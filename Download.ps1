@@ -1,13 +1,13 @@
-$GitHubRepositoryUri = "https://github.com/${GitHubRepositoryAuthor}/${GitHubRepositoryName}/archive/refs/heads/main.zip";
+$GitHubRepositoryUri = "https://github.com/brunoikeda/windows-dotfiles/archive/refs/heads/master.zip";
 
 $DotfilesFolder = Join-Path -Path $HOME -ChildPath ".dotfiles";
-$ZipRepositoryFile = Join-Path -Path $DotfilesFolder -ChildPath "${GitHubRepositoryName}-main.zip";
-$DotfilesWorkFolder = Join-Path -Path $DotfilesFolder -ChildPath "${GitHubRepositoryName}-main" | Join-Path -ChildPath "src";
+$ZipRepositoryFile = Join-Path -Path $DotfilesFolder -ChildPath "$windows-dotfiles.zip";
+$DotfilesWorkFolder = Join-Path -Path $DotfilesFolder -ChildPath "windows-dotfiles" | Join-Path -ChildPath "src";
 
 $DownloadResult = $FALSE;
 
 # Request custom values
-$ComputerName = Read-Host -Prompt "Input the new computer name here";
+$ComputerName = $env:COMPUTERNAME;
 
 $GitUserName = Read-Host -Prompt "Input your Git user name here";
 
