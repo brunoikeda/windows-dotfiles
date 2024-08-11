@@ -1,6 +1,6 @@
 function Set-VSCode-Configuration {
   $VSCodeSettingsPath = Join-Path -Path $env:appdata -ChildPath "Code" | Join-Path -ChildPath "User";
-  $DotfilesVSCodeSettingsFolder = Join-Path -Path $DotfilesWorkFolder -ChildPath "VSCode";
+  $DotfilesVSCodeSettingsFolder = $pwd;
   
   if (-not (Test-Path -Path $VSCodeSettingsPath)) {
     Write-Host "Configuring Visual Studio Code:" -ForegroundColor "Green";
@@ -28,3 +28,6 @@ code --install-extension "ms-vscode-remote.remote-containers";
 code --install-extension "ms-vscode-remote.remote-wsl";
 code --install-extension "jock.svg";
 code --install-extension "rangav.vscode-thunder-client";
+code --install-extension "vmware.vscode-boot-dev-pack";
+code --install-extension "vscjava.vscode-maven";
+code --install-extension "visualstudioexptteam.vscodeintellicode";

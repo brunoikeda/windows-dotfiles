@@ -1,6 +1,6 @@
 function Set-NotepadPlusPlus-Configuration {
   $NotepadPlusPlusConfigurationPath = Join-Path -Path $env:appdata -ChildPath "Notepad++";
-  $DotfilesNotepadPlusPlusConfigurationPath = Join-Path -Path $DotfilesWorkFolder -ChildPath "Notepad++";
+  $DotfilesNotepadPlusPlusConfigurationPath = $pwd;
 
   if (-not (Test-Path -Path $NotepadPlusPlusConfigurationPath)) {
     Write-Host "Notepad++ is not installed or configured." -ForegroundColor "Green";
