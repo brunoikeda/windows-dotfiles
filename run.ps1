@@ -13,4 +13,4 @@ if (($app -eq "node") -or ($app -eq "all") -or ($app -eq $null)) { Invoke-Expres
 if (($app -eq "node") -or ($app -eq "all") -or ($app -eq $null)) { Invoke-Expression (Join-Path -Path $srcDir -ChildPath "Node" | Join-Path -ChildPath "node.ps1"); }
 if (($app -eq "docker") -or ($app -eq "all") -or ($app -eq $null)) { Invoke-Expression (Join-Path -Path $srcDir -ChildPath "Docker" | Join-Path -ChildPath "Docker.ps1"); }
 if (($app -eq "wsl") -or ($app -eq "all") -or ($app -eq $null)) { Invoke-Expression (Join-Path -Path $srcDir -ChildPath "WSL" | Join-Path -ChildPath "WSL.ps1"); }
-if (($app -eq "notepad") -or ($app -eq "all") -or ($app -eq $null)) { Invoke-Expression (Join-Path -Path $srcDir -ChildPath "Notepad++" | Join-Path -ChildPath "Notepad++.ps1"); }
+#if (($app -eq "notepad") -or ($app -eq "all") -or ($app -eq $null)) { Invoke-Expression (Join-Path -Path $srcDir -ChildPath "Notepad++" | Join-Path -ChildPath "Notepad++.ps1"); }
